@@ -3,6 +3,11 @@ Base search to get Events by Event Code
 source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational | stats count by EventCode
 
 EventCode 1:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=1 | stats values(Image) AS Image, values(CommandLine) AS CommandLine, values(Hashes) AS Hashes, count by ParentImage
+
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=1 | stats values(ParentImage) AS ParentImage, values(CommandLine) AS CommandLine, values(Hashes) AS Hashes, count by Image
+
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=1 | stats values(Image) AS Image, values(ParentImage) AS ParentImage, values(Hashes) AS Hashes, count by CommandLine
 
 EventCode 2:
 
