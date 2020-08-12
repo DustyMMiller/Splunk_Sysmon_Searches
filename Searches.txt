@@ -1,0 +1,45 @@
+
+Base search to get Events by Event Code
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational | stats count by EventCode
+
+EventCode 1:
+
+EventCode 2:
+
+EventCode 3:
+
+EventCode 5:
+
+EventCode 6:
+
+EventCode 7:
+
+EventCode 8:
+
+EventCode 9:
+
+EventCode 10:
+
+EventCode 11:
+
+EventCode 12:
+
+EventCode 13:
+
+EventCode 14:
+
+EventCode 15:
+
+EventCode 17:
+
+EventCode 18:
+
+EventCode 19:
+
+EventCode 20:
+
+EventCode 21:
+
+EventCode 22:
+
+EventCode 23:
