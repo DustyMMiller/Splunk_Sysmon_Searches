@@ -10,41 +10,56 @@ source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=1 | stats v
 source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=1 | stats values(Image) AS Image, values(ParentImage) AS ParentImage, values(Hashes) AS Hashes, count by CommandLine
 
 EventCode 2:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=2 | stats values(TargetFilename) AS TargetFilename, count by Image
 
 EventCode 3:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=3 | stats values(DestinationIp) AS DestinationIp, count by Image
 
 EventCode 5:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=5 | stats values(Hashes) AS Hashes, count by Image
 
 EventCode 6:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=6 | stats values(Signature) AS Signature, values(Hashes) AS Hashes, count by ImageLoaded
 
 EventCode 7:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=7 | stats values(ImageLoaded) AS ImageLoaded, values(Hashes) AS Hashes, count by Image
 
 EventCode 8:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=8 | stats count by SourceImage, TargetImage
 
 EventCode 9:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=9 | stats values(Device) AS Device, count by Image
 
 EventCode 10:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=10 | stats count by SourceImage, TargetImage
 
 EventCode 11:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=11 | stats values(TargetFilename) AS TargetFilename, count by Image
 
 EventCode 12:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=12 | stats values(TargetObject) AS TargetObject, count by Image
 
 EventCode 13:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=13 | stats values(TargetObject) AS TargetObject, count by Image
 
 EventCode 14:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=14 | stats values(TargetObject) AS TargetObject, count by Image
 
 EventCode 15:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=15 | stats values(TargetFilename) AS TargetFilename, values(Hashes) AS Hashes, count by Image
 
 EventCode 17:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=17 | stats values(PipeName) AS PipeName, count by Image
 
 EventCode 18:
-
-EventCode 19:
-
-EventCode 20:
-
-EventCode 21:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=18 | stats values(PipeName) AS PipeName, count by Image
 
 EventCode 22:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=22 | stats count by Image
+
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=22 | stats count by QueryName
+
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=22 | stats count by QueryResults
 
 EventCode 23:
+source=xmlwineventlog:Microsoft-Windows-Sysmon/Operational EventCode=11 | stats values(TargetFilename) AS TargetFilename, count by Image
